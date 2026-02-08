@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will You Be My Valentine?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #5a1a2f;
+      overflow: hidden;
+    }
+    .card {
+      background: rgba(255,255,255,0.9);
+      border-radius: 24px;
+      padding: 40px 30px;
+      max-width: 420px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      animation: float 4s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #c9184a;
+    }
+    p {
+      font-size: 1rem;
+      margin: 15px 0;
+      line-height: 1.6;
+    }
+    .heart {
+      font-size: 2.5rem;
+      animation: beat 1.2s infinite;
+    }
+    @keyframes beat {
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+    .buttons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    button {
+      padding: 12px 22px;
+      border-radius: 999px;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .yes {
+      background: #ff4d6d;
+      color: white;
+    }
+    .yes:hover {
+      background: #c9184a;
+      transform: scale(1.05);
+    }
+    .no {
+      background: #ffe5ec;
+      color: #c9184a;
+    }
+    .message {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      display: none;
+      color: #c9184a;
+    }
+    footer {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <audio id="bgMusic" autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_1b3a4a36d6.mp3" type="audio/mpeg">
+  </audio>
+  <div class="card">
+    <div class="heart">❤️</div>
+    <h1>Hey Krupa</h1>
+    <p>
+      From Bihar to Tamil Nadu, miles apart but hearts always together.
+      Every smile of yours feels like home to me.
+    </p>
+    <p style="font-style: italic; color:#9d0208;">
+      "Nee illama naan illa ❤️"
+      <br/>
+      "En life‑oda azhagana gift nee dhaan 🌸"
+    </p>
+    <p>
+      So today, I want to ask you something very special…
+    </p>
+    <h2>Will you be my Valentine? 💕</h2>
+    <div class="buttons">
+      <button class="yes" onclick="sayYes()">Yes 💖</button>
+      <button class="no" onclick="moveNo(this)">No 🙈</button>
+    </div>
+    <div class="message" id="message">
+      Yayyyy! You just made my heart the happiest ❤️
+    </div>
+    <footer>
+      Made with love, just for you 🌸
+    </footer>
+  </div>  <script>
+    function sayYes() {
+      document.body.innerHTML = `
+        <div style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#ff758f,#ffb3c1);color:#fff;text-align:center;padding:20px;">
+          <div style="background:rgba(255,255,255,0.15);border-radius:30px;padding:40px;max-width:450px;box-shadow:0 30px 60px rgba(0,0,0,0.2);">
+            <h1 style="font-family:'Great Vibes',cursive;font-size:3.5rem;">She Said YES 💖</h1>
+            <p style="font-size:1.2rem;margin-top:15px;">
+              Krupa, you are my Valentine, today and always 🌹
+            </p>
+            <p style="margin-top:10px;font-style:italic;">
+              "Un kooda irukradhu dhan enaku ellame ❤️"
+            </p>
+            <div style="font-size:3rem;margin-top:20px;">💍💐❤️</div>
+            <p style="margin-top:20px;font-size:0.9rem;opacity:0.8;">
+              With all my love,
+              <br/>Your Vishal
+            </p>
+          </div>
+        </div>`;
+    }
+
+    function moveNo(btn) {
+      const x = Math.random() * 200 - 100;
+      const y = Math.random() * 200 - 100;
+      btn.style.transform = `translate(${x}px, ${y}px)`;
+    }
+  </script></body>
+</html>
