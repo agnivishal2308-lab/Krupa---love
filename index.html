@@ -137,16 +137,16 @@
             <p style="margin-top:10px;font-size:1.05rem;line-height:1.6;">
               Look at us 🥹❤️ — two smiles that belong together.
               I still can’t believe how lucky I am to have you by my side.
-              Every moment with you feels warm, safe, and beautiful.
             </p>
 
-            <p style="margin-top:12px;font-style:italic;">
-              "Un kooda irukradhu dhan enaku ellame ❤️"
-            </p>
+            <div style="margin-top:22px;">
+              <button onclick="showReward()" style="padding:12px 26px;border:none;border-radius:999px;background:#fff;color:#c9184a;font-size:1rem;cursor:pointer;font-weight:600;box-shadow:0 8px 20px rgba(0,0,0,0.25);">
+                🎁 Open your Valentine Reward
+              </button>
+            </div>
 
             <p style="margin-top:18px;font-size:0.95rem;opacity:0.9;">
-              Forever grateful for you,
-              <br/>Your Vishal 💕
+              Forever grateful for you,<n              <br/>Your Vishal 💕
             </p>
           </div>
         </div>`;
@@ -157,5 +157,36 @@
       const y = Math.random() * 200 - 100;
       btn.style.transform = `translate(${x}px, ${y}px)`;
     }
-  </script></body>
+  function showReward() {
+      document.body.innerHTML = `
+        <div style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#ff9a9e,#fad0c4);padding:20px;color:#5a1a2f;">
+          <div style="background:rgba(255,255,255,0.95);border-radius:30px;padding:35px;max-width:520px;box-shadow:0 30px 60px rgba(0,0,0,0.25);text-align:center;">
+            <h1 style="font-family:'Great Vibes',cursive;font-size:3.4rem;color:#c9184a;">For My Valentine, Krupa ❤️</h1>
+            <p style="margin-top:18px;font-size:1.05rem;line-height:1.8;">
+              Krupa, I don’t think words will ever be enough, but I still want to try.
+              I am deeply grateful that you came into my life and chose to walk this journey with me.
+              You have changed me for the better in ways I never imagined.
+              Because of you, I try every day to be kinder, stronger, and more patient.
+            </p>
+            <p style="margin-top:12px;font-size:1.05rem;line-height:1.8;">
+              You inspire me to grow, to dream bigger, and to become a better man — not just for myself,
+              but for us. With you, love feels safe, warm, and full of hope.
+              I honestly couldn’t have hoped for a better partner than you.
+            </p>
+            <p style="margin-top:12px;font-size:1.05rem;line-height:1.8;">
+              I want you to stay with me forever. I want to grow old with you,
+              marry you, and build a happy, loving family together.
+              I promise to stand by you, respect you, and love you more with every passing day.
+            </p>
+            <p style="margin-top:18px;font-style:italic;font-size:1.1rem;color:#9d0208;">
+              "Nee illama naan illa ❤️"
+            </p>
+            <p style="margin-top:20px;font-size:0.95rem;opacity:0.85;">
+              Always yours,<br/>Vishal 💖<br/><br/><strong>Say yes to forever? 💍</strong><br/><div style="margin-top:14px;"><a href="mailto:krupapaaru1012@gmail.com?subject=I%20said%20YES%20to%20being%20your%20Valentine%20%F0%9F%92%96&body=Hi%20Vishal,%0D%0A%0D%0AI%20just%20opened%20your%20beautiful%20Valentine%20website%20and%20I%20am%20so%20touched.%20I%20am%20happy%20to%20be%20your%20Valentine.%20Thank%20you%20for%20loving%20me%20and%20for%20this%20sweet%20surprise.%0D%0A%0D%0ALove,%0D%0AKrupa" style="display:inline-block;padding:12px 22px;border-radius:999px;background:#c9184a;color:#fff;text-decoration:none;font-weight:600;box-shadow:0 10px 25px rgba(0,0,0,0.25);">💌 Send YES confirmation</a></div>
+            </p>
+          </div>
+        </div>`;
+    }
+
+</script></body>
 </html>
